@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <div class="input-tab">
+            <h1>Unit Converter</h1>
+            
+            <nav>
+                <h3 id="Length" class="active">Length</h3>
+                <h3 id="Weight">Weight</h3>
+                <h3 id="Temperature">Temperature</h3>
+            </nav>
+
+            <p>Enter the length to convert</p>
+            <input type="text" id="inputValue">
+
+            <p>Unit to Convert from</p>
+            <div class="dropdown">
+                <input type="text" id="unitFrom" placeholder="Select unit" readonly>
+                <div class="dropdown-menu" id="dropdownFrom">
+                    <!-- Length units -->
+                    <p class="dropdown-item length-unit" data-value="meters">Meters</p>
+                    <p class="dropdown-item length-unit" data-value="feet">Feet</p>
+                    <p class="dropdown-item length-unit" data-value="inches">Inches</p>
+                    <p class="dropdown-item length-unit" data-value="centimeters">Centimeters</p>
+                    <p class="dropdown-item length-unit" data-value="kilometers">Kilometers</p>
+                    <p class="dropdown-item length-unit" data-value="miles">Miles</p>
+                    
+                    <!-- Weight units -->
+                    <p class="dropdown-item weight-unit" data-value="kilograms">Kilograms</p>
+                    <p class="dropdown-item weight-unit" data-value="pounds">Pounds</p>
+                    <p class="dropdown-item weight-unit" data-value="grams">Grams</p>
+                    <p class="dropdown-item weight-unit" data-value="ounces">Ounces</p>
+                    <p class="dropdown-item weight-unit" data-value="tons">Tons</p>
+                    
+                    <!-- Temperature units -->
+                    <p class="dropdown-item temp-unit" data-value="celsius">Celsius</p>
+                    <p class="dropdown-item temp-unit" data-value="fahrenheit">Fahrenheit</p>
+                    <p class="dropdown-item temp-unit" data-value="kelvin">Kelvin</p>
+                </div>
+            </div>
+
+            <p>Unit to Convert to</p>
+            <div class="dropdown">
+                <input type="text" id="unitTo" placeholder="Select unit" readonly>
+                <div class="dropdown-menu" id="dropdownTo">
+                    <!-- Length units -->
+                    <p class="dropdown-item length-unit" data-value="meters">Meters</p>
+                    <p class="dropdown-item length-unit" data-value="feet">Feet</p>
+                    <p class="dropdown-item length-unit" data-value="inches">Inches</p>
+                    <p class="dropdown-item length-unit" data-value="centimeters">Centimeters</p>
+                    <p class="dropdown-item length-unit" data-value="kilometers">Kilometers</p>
+                    <p class="dropdown-item length-unit" data-value="miles">Miles</p>
+                    
+                    <!-- Weight units -->
+                    <p class="dropdown-item weight-unit" data-value="kilograms">Kilograms</p>
+                    <p class="dropdown-item weight-unit" data-value="pounds">Pounds</p>
+                    <p class="dropdown-item weight-unit" data-value="grams">Grams</p>
+                    <p class="dropdown-item weight-unit" data-value="ounces">Ounces</p>
+                    <p class="dropdown-item weight-unit" data-value="tons">Tons</p>
+                    
+                    <!-- Temperature units -->
+                    <p class="dropdown-item temp-unit" data-value="celsius">Celsius</p>
+                    <p class="dropdown-item temp-unit" data-value="fahrenheit">Fahrenheit</p>
+                    <p class="dropdown-item temp-unit" data-value="kelvin">Kelvin</p>
+                </div>
+            </div>
+
+            <button id="convertBtn" class="button">Convert</button>
+        </div>
+
+        <div class="result-tab">
+            <h1>Unit Converter</h1>
+            
+            <nav>
+                <h3 id="LengthResult" class="active">Length</h3>
+                <h3 id="WeightResult">Weight</h3>
+                <h3 id="TemperatureResult">Temperature</h3>
+            </nav>
+            
+            <p>Result of your calculation</p>
+            <h2 id="resultText"></h2>
+            <button id="resetBtn" class="button">Reset</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
